@@ -1,0 +1,522 @@
+:root {
+  --red: #ff3131;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 2rem 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+  font-size: 3rem;
+  color: #333;
+  font-weight: bolder;
+}
+
+header .logo span {
+  color: var(--red);
+}
+
+header .navbar a {
+  font-size: 2rem;
+  padding-left: 1.5rem;
+  color: #666;
+}
+
+header .navbar a:hover {
+  color: var(--red);
+}
+
+header .icons a {
+  font-size: 2.5rem;
+  color: #333;
+  margin-left: 1.5rem;
+}
+
+header .icons a:hover {
+  color: var(--red);
+}
+
+header #toggler {
+  display: none;
+}
+
+header .fa-bars {
+  font-size: 3rem;
+  color: #333;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  border: 0.1rem solid rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
+/* media queries*/
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  header {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header .fa-bars {
+    display: block;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #eee;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  header #toggler:checked ~ .navbar {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  header .navbar a {
+    margin: 1.5rem;
+    padding: 1.5rem;
+    background: #fff;
+    border: 1rem solid rgba(0, 0, 0, 0.1);
+    display: block;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+.carousel {
+  width: 90%;
+  margin-top: 90px;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  position: relative;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-top: 2px solid black;
+}
+
+.carousel-slide {
+  display: flex;
+  width: 300%;
+}
+
+.carousel-slide img {
+  width: 100vw;
+  transition: transform 0.4s ease-in-out;
+}
+
+.carousel-prev,
+.carousel-next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  z-index: 100;
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
+}
+
+.icons {
+  display: flex;
+  gap: 10px;
+}
+
+.icons a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.container {
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.price {
+  padding: 20px;
+  background-color: #bababa;
+}
+
+.price p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.information {
+  padding: 20px;
+}
+
+.information p {
+  font-size: 15px;
+}
+
+.information label {
+  color: #666;
+  font-size: 15px;
+}
+
+.location-title {
+  padding: 20px;
+  background-color: #bababa;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.location {
+  padding: 20px;
+  font-size: 15px;
+  text-align: left;
+}
+
+.location table tr th {
+  color: #666;
+  padding-right: 200px;
+  padding-bottom: 20px;
+}
+
+.facility-title {
+  padding: 20px;
+  background-color: #bababa;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.facility {
+  padding: 20px;
+  font-size: 15px;
+  text-align: left;
+}
+
+.facility table tr th {
+  color: #666;
+  padding-right: 200px;
+}
+.facility table tr td {
+  padding-bottom: 20px;
+}
+
+.sewa-title{
+  
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+    background-color: #bababa;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  
+}
+
+.sewa-title .btn{
+  display: inline-block;
+    padding: 8px 16px;
+    background-color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 16px;
+    color: #fff;
+} */
+
+.sewa-title a:hover{
+  color: var(--red);
+}
+
+/* .form-sewa{
+  padding: 20px;
+  font-size: 15px;
+  text-align: left;
+  top: 0%;
+  
+} */
+
+/* .form-sewa h5{
+  text-align: center;
+  font-size: 15px;
+}
+
+.form-sewa label{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem 0; */
+
+
+/* .form-sewa span{
+  text-align: right;
+}
+
+.form-sewa input{
+  background-color: #fff;
+  padding: 5px;
+  font-size: 1rem;
+  width: 70%;
+} */
+
+/* .form-sewa .checkout-button{
+  padding: 6px 14px;
+  background-color: #333;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 20px;
+  margin: 1rem auto;
+  cursor: pointer; 
+}
+
+.form-sewa button:hover{
+  color: var(--red);
+} */
+
+/* .form-sewa .a{
+  text-align: center;
+}
+
+.form-sewa .btn{
+  display: inline-block;
+    padding: 8px 16px;
+    background-color: #333;
+    text-decoration: none;
+    border-radius: 20px;
+    margin-top: 16px;
+    color: #fff;
+} */
+
+
+
+/* CSS Footer */
+.footer {
+  background-color: #343434;
+  color: white;
+  padding: 50px 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.footer .container {
+  max-width: 1140px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align items to center vertically */
+  flex-wrap: nowrap; /* No wrapping, items stay in one line */
+  gap: 20px; /* Space between items */
+}
+
+.footer .footer-content {
+  flex: 1; /* Allow items to grow and take available space */
+  text-align: center;
+}
+
+.footer .footer-content h3,
+.footer .footer-content p,
+.footer .footer-content ul {
+  margin: 0;
+  padding: 0;
+}
+
+.footer .footer-content ul {
+  display: flex; /* Arrange list items horizontally */
+  justify-content: center; /* Center the list items */
+  list-style: none;
+}
+
+.footer .footer-content ul li {
+  margin: 0 10px; /* Space between list items */
+  position: relative;
+}
+
+.footer .footer-content ul li::before {
+  content: '';
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 100%;
+  width: 0;
+  height: 2px;
+  background: #f18930;
+  transition-duration: .5s;
+}
+
+.footer .footer-content ul li:hover::before {
+  width: 70px;
+}
+
+.footer .social-icons {
+  display: flex; /* Arrange social icons horizontally */
+  justify-content: center; /* Center the icons */
+  gap: 10px; /* Space between icons */
+}
+
+.footer .social-icons li {
+  display: inline-block;
+  text-align: center;
+}
+
+.footer .social-icons i {
+  color: white;
+  font-size: 25px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer a:hover {
+  color: #FF3131;
+}
+
+.footer .bottom-bar {
+  background: #FF3131;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 50px;
+  flex-basis: 100%; /* Ensure this section takes full width */
+}
+
+.footer .bottom-bar p {
+  color: #ffffff;
+  margin: 0;
+  font-size: 16px;
+  padding: 7px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .footer .container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footer .footer-content ul {
+      flex-direction: column;
+  }
+}
+
+
+/* media queries*/
+@media (max-width:991px){
+  
+  html{
+      font-size: 55%;
+ }  
+ 
+ header{
+  padding: 2rem;
+ }
+
+}
+
+/* @media (min-width: 768px) {
+  .search-button {
+     display: none;
+   }
+ } */
+
+@media (max-width:768px){
+
+  header .fa-bars{
+      display: block;
+  }
+
+  header .navbar{
+      position: absolute;
+      top: 100%; left: 0; right: 0;
+      background: #eee;
+      border-top: .1rem solid rgba(0, 0, 0, .1);
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); 
+  }
+
+  header #toggler:checked ~  .navbar{
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); 
+  }
+
+  header .navbar a{
+      margin: 1.5rem;
+      padding: 1.5rem;
+      background: #fff;
+      border: 1rem solid rgba(0, 0, 0, .1);
+      display: block;
+  }
+
+  .search-bar  {
+      display: block;
+      flex-direction: column;
+    }
+  
+
+
+}
+
+@media (max-width:450px){
+  
+  html{
+      font-size: 50%;
+ } 
+ 
+ .heading{
+  font-size: 3rem ;
+ }
+
+ 
+}

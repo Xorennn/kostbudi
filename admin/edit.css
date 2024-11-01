@@ -1,0 +1,136 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.header, .bttn-logout, .list-kamar {
+    margin-bottom: 20px;
+}
+
+/* Header Styles */
+.header h1 {
+    text-align: center;
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+/* Logout Button Styles */
+.bttn-logout {
+    text-align: right;
+}
+
+.bttn-logout a {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.bttn-logout a:hover {
+    background: #555;
+}
+
+/* Button Styles */
+.btn-tambah {
+    display: block;
+    width: 200px;
+    text-align: center;
+    background: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn-tambah:hover {
+    background: #218838;
+}
+
+/* Table Styles */
+.list-kamar table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.list-kamar table, th, td {
+    border: 1px solid #ddd;
+}
+
+.list-kamar th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+.list-kamar th {
+    background: #333;
+    color: #fff;
+}
+
+/* Action Links Styles */
+.action a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.action a:hover {
+    color: #0056b3;
+}
+
+.action .delete {
+    color: #dc3545;
+}
+
+.action .delete:hover {
+    color: #c82333;
+}
+
+/* Form Styles */
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form input[type="text"],
+form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    display: block;
+    width: 100%;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background: #0056b3;
+}
